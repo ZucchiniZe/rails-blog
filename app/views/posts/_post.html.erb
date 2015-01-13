@@ -1,0 +1,2 @@
+<h2><%= link_to_unless_current post.title, post %> <%= time_ago_in_words post.created_at %></h2>
+<%= simple_format post.content %>
