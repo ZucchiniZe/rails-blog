@@ -1,2 +1,2 @@
-<h2><%= link_to_unless_current post.title, post %> <%= time_ago_in_words post.created_at %></h2>
+<h2 class="page-header"> <%= link_to_unless_current post.title, post %> <small><%= time_ago_in_words post.created_at %> ago</small></h2>
 <%= simple_format post.content %>

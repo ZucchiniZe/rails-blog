@@ -1,9 +1,10 @@
 <%= div_for comment do %>
-  <p>
-  <strong>
-    Posted <%= time_ago_in_words(comment.created_at) %> ago
-  </strong>
-  <br/>
-    <%= comment.body %>
-  </p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Posted <span class="label label-default"><%= time_ago_in_words comment.created_at %> ago</span>
+    </div>
+    <div class="panel-body">
+      <%= comment.body %>
+    </div>
+  </div>
 <% end %>
