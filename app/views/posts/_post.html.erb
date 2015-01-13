@@ -1,2 +1,9 @@
-<h2 class="page-header"> <%= link_to_unless_current post.title, post %> <small><%= time_ago_in_words post.created_at %> ago</small></h2>
+<h2 class="page-header"> <%= link_to_unless_current post.title, post %>
+    <small>
+        <% if post.created_at != post.updated_at %>
+          <%= "Edited " + time_ago_in_words(post.updated_at) %>
+        <% else %>
+          <%= "Posted " + time_ago_in_words(post.created_at) %>
+        <% end %>
+    ago</small></h2>
 <%= simple_format post.content %>
