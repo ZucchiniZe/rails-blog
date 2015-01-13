@@ -36,4 +36,10 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
 gem 'rails_12factor', group: :production
+
+# Bootstrap styles
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+gem 'bootstrap_form'
