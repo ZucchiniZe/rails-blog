@@ -18,7 +18,15 @@
   <% end %>
   <p>
     <h3><%= f.label :body, "New comment" %></h3>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :rows => "5" %>
   </p>
   <p class="field"><%= f.submit "Add comment" %></p>
 <% end %>
+
+<script>
+  $('#new_comment').submit(function(e) {
+    if($('#comment_body').val() === "") {
+      e.preventDefault();
+    }
+  });
+</script>
