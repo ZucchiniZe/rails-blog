@@ -5,5 +5,8 @@
         <% else %>
           <%= "Posted " + time_ago_in_words(post.created_at) %>
         <% end %>
-    ago</small></h2>
+    ago<% if post.comments.count >= 1 %>
+           | <%= post.comments.count %> Comment<%= post.comments.count > 1 ? 's' : '' %>
+          <% end %>
+    </small></h2>
 <%= simple_format post.content %>
